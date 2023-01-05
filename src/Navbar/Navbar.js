@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 import 'tw-elements';
 const Navbar = () => {
     return (
-        <div>
+        <div className='opacity-100 bg-violet-400'>
             <nav className="
-relative
+
 w-full
 flex flex-wrap
 items-center
 justify-between
 py-4
-bg-gray-100
+bg-violet-200
 text-gray-500
 hover:text-gray-700
 focus:text-gray-700
 shadow-lg
-navbar navbar-expand-lg navbar-light
+navbar navbar-expand-lg navbar-light fixed top-0 z-30
 ">
                 <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
                     <button className="
@@ -38,7 +38,7 @@ navbar navbar-expand-lg navbar-light
                         </svg>
                     </button>
                     <div className="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent">
-                        <a className="text-xl text-black" href='/'>Navbar</a>
+                        <Link className="text-xl text-black" to='/'>Let's Chat</Link>
                         {/* <!-- Left links --> */}
                         <ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
                             <li className="nav-item px-2">

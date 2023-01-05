@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer class="text-center text-white bg-[#f1f1f1]" >
+        <footer class="text-center text-white bg-violet-100 mt-28" >
             <div class="container pt-9">
                 <div class="flex justify-center mb-9">
                     <a href="#!" class="mr-9 text-gray-800">
@@ -110,7 +110,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div class="text-center text-gray-700 p-4 bg-gray-400">
+            <div class="text-center text-gray-700 p-4 bg-violet-200">
                 © 2022 Copyright:
                 <a class="text-gray-800" href="https://jubairhossain-portfolio.netlify.app/">Md Jubair Hossain</a>
             </div>
