@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BsGoogle } from 'react-icons/bs'
-import { AiOutlineEye } from 'react-icons/ai'
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 
 
 const SignIn = ({ toggle, setToggle }) => {
+
+    const [show, setShow] = useState(false)
     return (
         <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0 bg-white p-10 rounded-lg">
             <h1 className='text-center font-semibold text-3xl mb-4 text-violet-900'>Login</h1>
@@ -43,7 +45,7 @@ const SignIn = ({ toggle, setToggle }) => {
                 {/* <!-- Password input --> */}
                 <div class="mb-6">
                     <input
-                        type="password"
+                        type={show ? "text" : "password"}
                         class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-violet-600 focus:outline-none"
                         id="exampleFormControlInput2"
                         placeholder="Password"
@@ -52,7 +54,9 @@ const SignIn = ({ toggle, setToggle }) => {
 
                 <div class="flex justify-between items-center mb-6">
                     <div class="form-group form-check">
-                        <AiOutlineEye className='text-xl cursor-pointer' />
+                        {show ? <AiOutlineEyeInvisible className='text-xl cursor-pointer' onClick={() => setShow(!show)} />
+                            :
+                            <AiOutlineEye className='text-xl cursor-pointer' onClick={() => setShow(!show)} />}
                     </div>
 
                 </div>
